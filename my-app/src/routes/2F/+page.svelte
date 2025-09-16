@@ -1,8 +1,8 @@
 <script>
     let { data } = $props();
     // console.log(data);
-    const members = data.members;
-    import Book from "$lib/components/Book.svelte";
+    const members2 = data.members2;
+    import Book2F from "$lib/components/Book2F.svelte";
     import { onMount } from "svelte";
 
     // The function is defined here
@@ -24,4 +24,4 @@
     });
 </script>
 
-<Book {members} />
+<Book2F {members2} />
