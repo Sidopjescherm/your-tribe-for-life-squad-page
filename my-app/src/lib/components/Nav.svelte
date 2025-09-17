@@ -37,8 +37,8 @@
 
 <style>
     :root {
-        --color-primary: #007bff;
-        --color-secondary: #dc3545;
+        --color-primary: #84B0B5;
+        --color-secondary: #CC7490;
         --color-light: #fff;
         --pill-width: 18em;
         --pill-height: 4.5em;
@@ -49,7 +49,7 @@
         justify-content: center;
         align-items: center;
         height: 12vh;
-        width: 100vw;
+        width: 98vw;
         opacity: 0;
         animation: header-fadeIn 0.7s ease-in-out forwards;
     }

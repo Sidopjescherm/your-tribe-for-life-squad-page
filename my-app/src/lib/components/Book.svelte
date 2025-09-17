@@ -21,7 +21,7 @@
             <h2>Meet squad 2E</h2>
         </div>
         <div class="back">
-            <img src={members[0].avatar} alt="{members[0].name}'s avatar" />
+            <a href="/{members[0].id}"> <img src={members[0].avatar} alt="{members[0].name}'s avatar" /> </a>
         </div>
     </div>
 
@@ -32,7 +32,8 @@
                 <p>{members[index].bio}</p>
             </div>
             <div class="back">
-                <img src={member.avatar} alt="{member.name}'s avatar" />
+                <a href="/{member.id}"><img src={member.avatar} alt="{member.name}'s avatar" /></a>
+                <!-- <a href="/{members.id}"> <img src={member.avatar} alt="{member.name}'s avatar" /> </a> -->
             </div>
         </div>
     {/each}

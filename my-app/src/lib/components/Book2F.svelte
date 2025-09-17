@@ -21,7 +21,7 @@
             <h2>Meet squad 2F</h2>
         </div>
         <div class="back">
-            <img src={members2[0].avatar} alt="{members2[0].name}'s avatar" />
+            <a href="/{members2[0].id}"> <img src={members2[0].avatar} alt="{members2[0].name}'s avatar" /> </a>
         </div>
     </div>
 
@@ -41,7 +41,7 @@
                 </p>
             </div>
             <div class="back">
-                <img src={member.avatar} alt="{member.name}'s avatar" />
+                <a href="/{member.id}"><img src={member.avatar} alt="{member.name}'s avatar" /></a>
             </div>
         </div>
     {/each}
@@ -224,8 +224,7 @@
                 hsl(150 80% 20% / 0.3) 0%,
                 hsl(170 60% 10% / 0.1) 100%
             ),
-            /* var(--color-salmon) 50% / cover; */ var(--color-storm) 50% /
-                cover;
+        var(--color-salmon) 50% / cover; 
 
         .textLarge {
             font-size: 3em;
