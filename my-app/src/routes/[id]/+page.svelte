@@ -83,7 +83,7 @@
     }
 
     #photo_n_name {
-        background-color: white;
+        background-color: whitesmoke;
         width: 300px;
         height: 400px;
 
@@ -94,7 +94,7 @@
     }
 
     #details {
-        background-color: white;
+        background-color: whitesmoke;
         width: 300px;
 
         display: grid;
@@ -102,6 +102,6 @@
     }
 
     #photo_n_name, #details {
-        box-shadow: 10px 10px 5px grey;
+        box-shadow: 7px 7px 5px grey;
     }
 </style>
