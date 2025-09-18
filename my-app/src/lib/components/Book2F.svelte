@@ -9,7 +9,7 @@
                 <h1 class="textLarge">FDND 2F</h1>
                 <p>Frontend Design & Development</p>
             </div>
-            <p><strong>2025 - 2026.</strong><br />First edition</p>
+            <p><strong>2025 - 2026.</strong><br>First edition</p>
         </div>
         <div class="back">
             <h2>Welcome</h2>
@@ -21,7 +21,11 @@
             <h2>Meet squad 2F</h2>
         </div>
         <div class="back">
-            <a href="/{members2[0].id}"> <img src={members2[0].avatar} alt="{members2[0].name}'s avatar" /> </a>
+            {#if members2[0].avatar === null}
+                <a href="/{members2[0].id}"> <img src="src/lib/assets/github_logo.png" alt="Placeholder avatar"> </a>
+            {:else}
+                <a href="/{members2[0].id}"> <img src={members2[0].avatar} alt="{members2[0].name}'s avatar" > </a>
+            {/if}
         </div>
     </div>
 
@@ -41,7 +45,11 @@
                 </p>
             </div>
             <div class="back">
-                <a href="/{member.id}"><img src={member.avatar} alt="{member.name}'s avatar" /></a>
+                {#if member.avatar === null}
+                    <a href="/{member.id}"> <img src="src/lib/assets/github_logo.png" alt="Placeholder avatar"> </a>
+                {:else}
+                    <a href="/{member.id}"><img src={member.avatar} alt="{member.name}'s avatar" ></a>
+                {/if}
             </div>
         </div>
     {/each}
