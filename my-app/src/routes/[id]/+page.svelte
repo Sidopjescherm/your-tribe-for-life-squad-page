@@ -12,9 +12,9 @@
 <section id="polaroid">
     <article id="photo_n_name">
         {#if student.avatar === null}
-          <a href="{student.profilecard}"><img src="src/lib/assets/github_logo.png" alt="Placeholder avatar" width="250px" height="250px"/></a>
+          <a href="{student.profilecard}"><img src="src/lib/assets/github_logo.png" alt="Placeholder avatar" width="250px" height="250px"></a>
         {:else}
-          <a href="{student.profilecard}"><img src="{student.avatar}" alt="{student.name}'s avatar" width="250px" height="250px"/></a>
+          <a href="{student.profilecard}"><img src="{student.avatar}" alt="{student.name}'s avatar" width="250px" height="250px"></a>
         {/if}
         <h1>{student.name}</h1>
     </article>
