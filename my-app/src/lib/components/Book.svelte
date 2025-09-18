@@ -21,7 +21,7 @@
             <h2>Meet squad 2E</h2>
         </div>
         <div class="back">
-            <a href="/{members[0].id}"> <img src={members[0].avatar} alt="{members[0].name}'s avatar" > </a>
+            <a href="/{members[0].id}"> <img src={members[0].avatar} alt="{members[0].name}'s avatar" style="view-transition-name: move_in;"> </a>
         </div>
     </div>
 
@@ -53,6 +53,30 @@
 </div>
 
 <style>
+
+    @view-transition {
+    navigation: auto;
+    }
+
+    ::view-transition-old(move_in) {
+        animation: moving 0.2s ease-in-out;
+    }
+
+        ::view-transition-new(move_in) {
+        animation: moving 0.3s ease-in-out;
+    }
+
+    @keyframes moving {
+        0% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-100%) scale(0.8);
+            opacity: 0;
+        }
+}
+
     * {
         box-sizing: border-box;
     }

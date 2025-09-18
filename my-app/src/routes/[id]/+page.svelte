@@ -12,9 +12,9 @@
 <section id="polaroid">
     <article id="photo_n_name">
         {#if student.avatar === null}
-          <a href="{student.profilecard}"><img src="src/lib/assets/github_logo.png" alt="Placeholder avatar" width="250px" height="250px"></a>
+          <a href="{student.profilecard}"><img src="src/lib/assets/github_logo.png" alt="Placeholder avatar" width="250px" height="250px" style="view-transition-name: move_in;"></a>
         {:else}
-          <a href="{student.profilecard}"><img src="{student.avatar}" alt="{student.name}'s avatar" width="250px" height="250px"></a>
+          <a href="{student.profilecard}"><img src="{student.avatar}" alt="{student.name}'s avatar" width="250px" height="250px" style="view-transition-name: move_in;"></a>
         {/if}
         <h1>{student.name}</h1>
     </article>
@@ -51,6 +51,29 @@
 </section>
 
 <style>
+    @view-transition {
+    navigation: auto;
+}
+
+::view-transition-old(move_in) {
+    animation: moving 0.2s ease-in-out;
+}
+
+    ::view-transition-new(move_in) {
+    animation: moving 0.3s ease-in-out;
+}
+
+@keyframes moving {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%) scale(0.8);
+        opacity: 0;
+    }
+}
+
     #back {
         width: 8em;
         height: 2em;
