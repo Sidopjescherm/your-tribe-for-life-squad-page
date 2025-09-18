@@ -32,8 +32,11 @@
                 <p>{members[index].bio}</p>
             </div>
             <div class="back">
-                <a href="/{member.id}"><img src={member.avatar} alt="{member.name}'s avatar" /></a>
-                <!-- <a href="/{members.id}"> <img src={member.avatar} alt="{member.name}'s avatar" /> </a> -->
+                {#if member.avatar === null}
+                    <a href="/{member.id}"> <img src="src/lib/assets/github_logo.png" alt="Placeholder avatar"> </a>
+                {:else}
+                    <a href="/{member.id}"><img src={member.avatar} alt="{member.name}'s avatar" /></a>
+                {/if}
             </div>
         </div>
     {/each}
